@@ -1,0 +1,22 @@
+<div>
+    <h1><a href="/">CV</a></h1>
+</div>
+
+{% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h2><a href="">{{ post.name }}</a></h2>
+        <strong>Education:</strong>
+        <p>{{ post.education|linebreaksbr }}</p>
+        <strong>Tech_Skills:</strong>
+        <p>{{ post.tech_skills|linebreaksbr }}</p>
+        <strong>Other_Skills:</strong>
+        <p>{{ post.other_skills|linebreaksbr }}</p>
+        <strong>Work_Experience:</strong>
+        <p>{{ post.work_experience|linebreaksbr }}</p>
+        <strong>Projects:</strong>
+        <p>{{ post.projects|linebreaksbr }}</p>
+        <strong>Others:</strong>
+        <p>{{ post.others|linebreaksbr }}</p>
+ </div>
+{% endfor %}
